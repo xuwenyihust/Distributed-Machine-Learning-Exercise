@@ -1,2 +1,2 @@
 # Machine-Learning-Exercise
-Exercises for machine learning algorithms.
+Exercises for distributed machine learning algorithms.
