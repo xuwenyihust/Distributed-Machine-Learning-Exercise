@@ -10,7 +10,7 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
 
 - Parse CTR dataset.
     - Accept the Criteo's data sharing agreement and download the data.
-    - Split the data into **training, validation and test** set.
+    - Split the data into **training, validation and test** set using **randomSplit** method.
     - Store the datasets using **RDDs** and cache them.
     - **Extract features** from each data point which is a string containing several fields.
 
@@ -18,7 +18,8 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
 - Featurize categorical data using one-hot-encoding ([OHE](https://www.quora.com/What-is-one-hot-encoding-and-when-is-it-used-in-data-science)).
 *Categorical features -> numerical features.*
     - Define a function to generate OHE features from original categorical data and represent OHE data in SparseVector.       
-    - Create an OHE dictionary from the dataset.
+    - Create an **OHE dictionary** from the dataset.
+    - Apply OHE to the dataset.
 
 - Reduce dimensionality.
 
