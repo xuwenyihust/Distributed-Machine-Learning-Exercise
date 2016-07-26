@@ -22,8 +22,10 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
     - Apply OHE to the dataset.
 
 - Reduce dimensionality.
+    - Use feature hashing.
 
-- CTR prediction.
+- Model construction.
+    - Use logistic regression model
 
 - Model evaluation.
 
