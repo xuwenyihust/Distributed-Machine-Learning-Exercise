@@ -35,6 +35,19 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
 ## Libraries Used
 
 
+## Appendix
+
+- One-Hot-Encoding
+
+- [Log Loss](https://www.kaggle.com/wiki/LogarithmicLoss)
+    >>> A standard evaluation criterion when **predicting rare-events** such as click-through rate prediction.
+    >>> Fit a log linear probability model to a set of binary labeled examples.
+
 ## Resources
 - [Kaggle Display Advertising Challenge](https://www.kaggle.com/c/criteo-display-ad-challenge)
 - [edX CS120x Distributed Machine Learning with Apache Spark](https://courses.edx.org/courses/course-v1:BerkeleyX+CS120x+2T2016/info)
+
+- [Logarithmic Loss](https://www.kaggle.com/wiki/LogarithmicLoss)
+
+- [What is an intuitive explanation for the log loss function](https://www.quora.com/What-is-an-intuitive-explanation-for-the-log-loss-function)
+
