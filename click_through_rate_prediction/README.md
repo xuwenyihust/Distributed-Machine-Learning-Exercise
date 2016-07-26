@@ -31,6 +31,11 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
     - Use **logistic regression** model.
 
 - Model evaluation.
+    - Use log loss to evaluate the model.
+    > if y == 1:
+          return -log(p)
+      else:
+          return -log(1 - p)
 
 ## Libraries Used
 
@@ -40,9 +45,11 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
 - One-Hot-Encoding
 
 - [Log Loss](https://www.kaggle.com/wiki/LogarithmicLoss)
-    > A standard evaluation criterion when **predicting rare-events** such as click-through rate prediction.
-
-    > Fit a log linear probability model to a set of binary labeled examples.
+    - A standard evaluation criterion when **predicting rare-events** such as click-through rate prediction.
+    - This metric should be used when we need to **predict** that something is **true or false with a probability** (likelihood) ranging from definitely true (1) to equally true (0.5) to definitely false(0).
+    - The use of **log** on the error provides **extreme punishments** for being both confident and wrong.
+    - Fit a **log linear probability model** to a set of **binary labeled examples**.
+    - The **log linear model** assumes that the log-odds of the conditional probability of the target given the features is a **weighted linear combination of features**. 
 
 ## Resources
 - [Kaggle Display Advertising Challenge](https://www.kaggle.com/c/criteo-display-ad-challenge)
