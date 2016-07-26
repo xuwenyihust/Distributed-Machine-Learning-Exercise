@@ -21,6 +21,9 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
     - Create an **OHE dictionary** from the dataset.
     - Apply OHE to the dataset.
 
+<p align="justify">
+  <img src="https://github.com/xuwenyihust/Distributed-Machine-Learning-Exercise/blob/master/images/CTR_data.JPG" width="800"/>
+</p>
 - Reduce dimensionality.
     - Use **feature hashing**.
 
