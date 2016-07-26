@@ -40,8 +40,9 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
 - One-Hot-Encoding
 
 - [Log Loss](https://www.kaggle.com/wiki/LogarithmicLoss)
-    >>> A standard evaluation criterion when **predicting rare-events** such as click-through rate prediction.
-    >>> Fit a log linear probability model to a set of binary labeled examples.
+    > A standard evaluation criterion when **predicting rare-events** such as click-through rate prediction.
+
+    > Fit a log linear probability model to a set of binary labeled examples.
 
 ## Resources
 - [Kaggle Display Advertising Challenge](https://www.kaggle.com/c/criteo-display-ad-challenge)
