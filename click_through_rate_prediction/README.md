@@ -32,14 +32,12 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
 
 - Model evaluation.
     - Use log loss to evaluate the model.
-
-    > if y == 1:
-    >
-    >     return -log(p)
-    >
-    > else:
-    >
-    >     return -log(1 - p)
+```python
+    >>> if y == 1:
+    >>>     return -log(p)
+    >>> else:
+    >>>     return -log(1 - p)
+```
 
 ## Libraries Used
 
