@@ -55,11 +55,19 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
          return -log(1 - p)
     ```      
     - Compute the **baseline log loss** (fix the predicted probability to be the fraction of label 1 in the true labels). 
-
     - Use the predicted probabilities to compute the log loss.
+    - Plot the **ROC curve**.
+<p align="justify">
+  <img src="https://github.com/xuwenyihust/Distributed-Machine-Learning-Exercise/blob/master/images/CTR_ROC.png" width="900"/>
+</p>
+
 
 ## Libraries Used
-
+- [matplotlib](http://matplotlib.org/)
+- [numpy](http://www.numpy.org/)
+- [pyspark.mllib](https://spark.apache.org/docs/1.6.0/api/python/pyspark.mllib.html)
+- [math](https://docs.python.org/2/library/math.html)
+- [collections](https://docs.python.org/2/library/collections.html)
 
 ## Appendix
 
