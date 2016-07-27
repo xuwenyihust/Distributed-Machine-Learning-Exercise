@@ -2,6 +2,8 @@
 
 Create a click-through rate (**CTR**) prediction pipeline.
 
+Use **logistic regression** model to predict the click-through rate.(*Cause we also want to know the probabilities of the our predictions.*)
+
 ## Data
 
 The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-kaggle-display-advertising-challenge-dataset/).
@@ -24,11 +26,25 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
 <p align="justify">
   <img src="https://github.com/xuwenyihust/Distributed-Machine-Learning-Exercise/blob/master/images/CTR_data.JPG" width="900"/>
 </p>
-- Reduce dimensionality.
-    - Use **feature hashing**.
+
+- Handle unseen features.
+    - Some categorical values will likely appear in new data that did not exist in the training data.
+    - When compute OHE features for the validation & test datasets, **ignore previously unseen features**.
+
+- Reduce feature dimension.
+    - Via **feature hashing**.
 
 - Model construction.
     - Use **logistic regression** model.
+    - **Train** the model.
+    - Generate **predictions**.
+```python
+    rawPrediction = weights.dot(point.features) + intercept
+    # Bound the raw prediction value
+    rawPrediction = min(rawPrediction, 20)
+    rawPrediction = max(rawPrediction, -20)
+    return 1/(1 + exp(-rawPrediction))
+```
 
 - Model evaluation.
     - Use **log loss** to evaluate the model.
@@ -38,6 +54,9 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
     else:
          return -log(1 - p)
 ```
+    - Compute the **baseline log loss** (fix the predicted probability to be the fraction of label 1 in the true labels). 
+
+    - Use the predicted probabilities to compute the log loss.
 
 ## Libraries Used
 
