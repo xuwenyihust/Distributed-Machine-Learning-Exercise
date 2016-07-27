@@ -54,6 +54,7 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
     else:
          return -log(1 - p)
 ```
+
     - Compute the **baseline log loss** (fix the predicted probability to be the fraction of label 1 in the true labels). 
 
     - Use the predicted probabilities to compute the log loss.
