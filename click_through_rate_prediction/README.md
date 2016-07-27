@@ -32,11 +32,24 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
     - When compute OHE features for the validation & test datasets, **ignore previously unseen features**.
 
 - Reduce feature dimension.
+    ```python
+    >>> print numCtrOHEFeats
+    233286
+    ```
     - Via **feature hashing**.
 
 - Model construction.
     - Use **logistic regression** model.
     - **Train** the model.
+    - Use **grid search** to find suitable hyperparameters.
+    ```python
+    for stepSize in stepSizes:
+        for regParam in regParams:
+            model = (LogisticRegressionWithSGD
+                      .train(hashTrainData, numIters, stepSize, regParam=regParam, regType=regType,
+                        intercept=includeIntercept))
+            logLossVa = evaluateResults(model, hashValidationData)
+    ```
     - Generate **predictions**.
     ```python
     rawPrediction = weights.dot(point.features) + intercept
@@ -60,7 +73,12 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
 <p align="justify">
   <img src="https://github.com/xuwenyihust/Distributed-Machine-Learning-Exercise/blob/master/images/CTR_ROC.png" width="900"/>
 </p>
-
+    - Evaluate on the test set.
+    ```python
+    Hashed Features Test Log Loss:
+	Baseline = 0.537
+	LogReg = 0.457
+    ```
 
 ## Libraries Used
 - [matplotlib](http://matplotlib.org/)
@@ -72,6 +90,7 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
 ## Appendix
 
 - One-Hot-Encoding
+    - Categorical features to numerical features.
 
 - [Log Loss](https://www.kaggle.com/wiki/LogarithmicLoss)
     - A standard evaluation criterion when **predicting rare-events** such as click-through rate prediction.
