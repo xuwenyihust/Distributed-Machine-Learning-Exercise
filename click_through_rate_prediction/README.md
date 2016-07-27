@@ -38,13 +38,13 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
     - Use **logistic regression** model.
     - **Train** the model.
     - Generate **predictions**.
-```python
+    ```python
     rawPrediction = weights.dot(point.features) + intercept
     # Bound the raw prediction value
     rawPrediction = min(rawPrediction, 20)
     rawPrediction = max(rawPrediction, -20)
     return 1/(1 + exp(-rawPrediction))
-```
+    ```
 
 - Model evaluation.
     - Use **log loss** to evaluate the model.
