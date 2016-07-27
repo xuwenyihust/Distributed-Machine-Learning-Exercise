@@ -4,7 +4,7 @@ Create a click-through rate (**CTR**) prediction pipeline.
 
 ## Data
 
-The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-kaggle-display-advertising-challenge-dataset/)
+The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-kaggle-display-advertising-challenge-dataset/).
 
 ## Process
 
@@ -31,11 +31,11 @@ The dataset was taken from [Criteo Labs](http://labs.criteo.com/downloads/2014-k
     - Use **logistic regression** model.
 
 - Model evaluation.
-    - Use log loss to evaluate the model.
+    - Use **log loss** to evaluate the model.
 ```python
     if y == 1:
          return -log(p)
-     else:
+    else:
          return -log(1 - p)
 ```
 
